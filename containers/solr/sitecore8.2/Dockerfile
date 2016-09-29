@@ -35,7 +35,7 @@ echo name=social_messages_master > $SOLR_PATH/social_messages_master/core.proper
 cp -r $SOLR_PATH/configsets/basic_configs/ $SOLR_PATH/social_messages_web && \
 echo name=social_messages_web > $SOLR_PATH/social_messages_web/core.properties && \
 cp -r $SOLR_PATH/configsets/basic_configs/ $SOLR_PATH/sitecore_analytics_index && \
-echo name=sitecore_analytics_index > $SOLR_PATH/sitecore_analytics_index/core.properties
+echo name=sitecore_analytics_index > $SOLR_PATH/sitecore_analytics_index/core.properties && \
 cp -r $SOLR_PATH/configsets/basic_configs/ $SOLR_PATH/sitecore_core_indexMainAlias && \
 echo name=sitecore_core_indexMainAlias > $SOLR_PATH/sitecore_core_indexMainAlias/core.properties && \
 cp -r $SOLR_PATH/configsets/basic_configs/ $SOLR_PATH/sitecore_master_indexMainAlias && \
