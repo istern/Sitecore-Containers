@@ -26,8 +26,8 @@ New-Item c:\solr\solr-5.3.2\server\solr\sitecore_web_index\core.properties -type
 #New-Item c:\solr\solr-5.3.2\social_messages_master\core.properties  -Type file -force -value "name=social_messages_master" 
 #Copy-Item -recurse c:\solr\solr-5.3.2\server\solr\configsets\basic_configs c:\solr\solr-5.3.2\social_messages_web 
 #New-Item c:\solr\solr-5.3.2\social_messages_web\core.properties  -Type file -force -value "name=social_messages_web" 
-#Copy-Item -recurse c:\solr\solr-5.3.2\server\solr\configsets\basic_configs c:\solr\solr-5.3.2\server\solr\sitecore_analytics_index 
-#New-Item c:\solr\solr-5.3.2\server\solr\sitecore_analytics_index\core.properties  -Type file -force -value "name=sitecore_analytics_index" 
+Copy-Item -recurse c:\solr\solr-5.3.2\server\solr\configsets\basic_configs c:\solr\solr-5.3.2\server\solr\sitecore_analytics_index 
+New-Item c:\solr\solr-5.3.2\server\solr\sitecore_analytics_index\core.properties  -Type file -force -value "name=sitecore_analytics_index" 
 #Copy-Item -recurse  c:\solr\solr-5.3.2\server\solr\configsets\basic_configs c:\solr\solr-5.3.2\server\solr\sitecore_core_indexMainAlias 
 #New-Item c:\solr\solr-5.3.2\server\solr\sitecore_core_indexMainAlias\core.properties  -Type file -force -value "name=sitecore_core_indexMainAlias" 
 #Copy-Item -recurse c:\solr\solr-5.3.2\server\solr\configsets\basic_configs c:\solr\solr-5.3.2\server\solr\sitecore_master_indexMainAlias 
