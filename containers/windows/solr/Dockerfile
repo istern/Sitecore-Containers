@@ -1,5 +1,4 @@
-FROM windows-java-base
-
+FROM istern/windows-java-base
 
 ENV SOLR_PATH "c:\solr\solr-5.4.0\server\solr"
 
