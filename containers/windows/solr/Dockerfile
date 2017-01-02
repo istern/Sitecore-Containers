@@ -12,5 +12,4 @@ COPY resources/buildcores.ps1 c:\buildcores.ps1
 RUN powershell c:\buildcores.ps1 
 
 EXPOSE 8983
-
-ENTRYPOINT "c:\\solr\\solr-5.4.0\\bin\\solr.cmd start -p 8983"
+CMD powershell -Command "c:\\solr\\solr-5.4.0\\bin\\solr.cmd start -p 8983 -f"
