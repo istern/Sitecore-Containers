@@ -1,0 +1,75 @@
+<Settings>
+  <!--
+    This is an example file which overrides some defaults from the application configuration.
+    To enable this file, remove the '.example' extension from the file name.
+    
+    ### IMPORTANT ###
+    
+    Configuration files are loaded in the following order
+      1) Files are loaded from appplicationPath/config/sitecore
+      2) Files are loaded from hostPath/config/global (if it exists)
+      3) Files are loaded from hostPath/config/{environment} (if it exists)
+      
+    applicationPath is the installation path of the application
+    hostPath is the current working directory when the application is executed.
+    
+    The following files are accepted for configuration:
+      - Xml
+      - Json
+      - Ini
+    
+    NOTE: Files must be prefixed with 'sc.' to be loaded.
+    
+    
+    Overriding Values:
+    
+      Values from configuration files can be overridden simply by declaring them again.
+      To add new settings, simple declare them in the xml.
+      
+      
+    Key Redirects:
+    
+      Configuration elements can point to other configuration values using the following syntax:
+    
+      If we have a config of
+        <Settings>
+          <Sitecore>
+            <Publishing>
+              <ConnectionStrings>
+                <Master>user id=sa;password=password;data source=.\SQLEXPRESS;database=sitecore.Master;MultipleActiveResultSets=True;</Master>
+              </ConnectionStrings>
+            </Publishing>
+            </Sitecore
+        </Settings>
+      
+      We can point another configuration element to the same value using
+        ${Sitecore:Publishing:ConnectionStrings:Master}
+    
+      NOTE: 
+        The path must be defined using ':' between each node name.
+        The full value must start with '${' and end with '}'    
+  -->
+  <Sitecore>
+    <Publishing>
+      <!--
+        Overriding & controlling the log level for different parts of the system
+      -->
+      <Logging>
+        <Filters>
+          <Sitecore>Information</Sitecore>
+          <Sitecore.Framework.Publishing.DataPromotion>Debug</Sitecore.Framework.Publishing.DataPromotion>
+          <Sitecore.Framework.Publishing.ManifestCalculation>Trace</Sitecore.Framework.Publishing.ManifestCalculation>
+        </Filters>
+      </Logging>
+	    <ConnectionStrings>
+        {Core}
+        {MASTER}
+        {WEB}
+        </ConnectionStrings>
+    </Publishing>
+  </Sitecore>
+</Settings>
+
+<!--
+  See the configuration files in applicationPath/config/sitecore for more configuration information
+-->
