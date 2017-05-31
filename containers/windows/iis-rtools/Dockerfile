@@ -1,13 +1,9 @@
-FROM istern/iis-sitecore-base
+FROM istern/iis-base
 
-SHELL ["powershell", "-NoProfile", "-Command", "$ErrorActionPreference = 'Stop';"] 
+ADD https://go.microsoft.com/fwlink/?LinkId=746570&clcid=0x409 C:\vs_remotetools.exe
 
-ADD https://go.microsoft.com/fwlink/?LinkId=615470&clcid=0x409 C:/rtools_setup_x64.exe
-
-RUN C:\rtools_setup_x64.exe /quiet /norestart; \
-    while(ps rtools*) { Start-Sleep -Seconds 5 }; \
-    Remove-Item C:\rtools_setup_x64.exe -Force;
-    
+RUN C:\vs_remotetools.exe /quiet /norestart
+   
 ADD Resources/ /Resources
 
 CMD C:\Resources\Start-RemoteDebug.ps1;

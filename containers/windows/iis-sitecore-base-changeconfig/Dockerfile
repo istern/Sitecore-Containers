@@ -7,6 +7,6 @@ ENV mongoserver _
 
 ADD Resources/configure.ps1 /Resources/configure.ps1
 
-RUN powershell.exe -Command Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters' -Name ServerPriorityTimeLimit -Value 0 -Type DWord;
+EXPOSE 80
 
 ENTRYPOINT powershell.exe -Command c:\Resources\configure.ps1
