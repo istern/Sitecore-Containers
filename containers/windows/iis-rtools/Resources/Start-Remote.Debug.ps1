@@ -1,1 +1,1 @@
-& "C:\Program Files\Microsoft Visual Studio 15.0\Common7\IDE\Remote Debugger\x86\msvsmon.exe" /nostatus /silent /noauth /anyuser /nosecuritywarn /timeout:2147483646;
+& "C:\Program Files\Microsoft Visual Studio 15.0\Common7\IDE\Remote Debugger\x64\msvsmon.exe" /nostatus /silent /noauth /anyuser /nosecuritywarn /timeout:2147483646;
